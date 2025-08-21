@@ -1,0 +1,34 @@
+@rootURL= http://localhost:5110
+
+GET {{rootURL}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{rootURL}}/api/books
+Accept: application/json
+
+###
+GET {{rootURL}}/api/books/1
+Accept: application/json
+
+###
+POST {{rootURL}}/api/books
+Content-Type: application/json
+{
+  "title": "1984",
+  "author": "George Orwell",
+  "yearPublished": "1949"
+}
+
+###
+PUT {{rootURL}}/api/books/3
+Content-Type: application/json
+{
+  "id": 3,
+  "title": "1984",
+  "author": "Gilberto Gil",
+  "yearPublished": "2001"
+}
+
+###
+DELETE {{rootURL}}/api/books/3
